@@ -4,9 +4,10 @@
 
 class Iterator {
 public:
-	~Iterator() {}
 	int & operator* () const;
 	void operator++();
+	bool operator==(const Iterator & rhs);
+
 private:
 	// Iterator constructor
 	Iterator(Link * link) : link(link) {}
@@ -14,5 +15,5 @@ private:
 	// Link that the iterator is pointing to
 	Link * link;
 
-friend class List;
+	friend class List;
 };

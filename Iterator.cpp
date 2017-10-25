@@ -1,9 +1,7 @@
-#pragma once
-
-class Iterator() {
+#include "Iterator.h"
 
 // Returns the value from the linked link
-int Iterator::& operator* () const {
+int & Iterator::operator* () const {
 	return link -> value;
 }
 
@@ -12,4 +10,7 @@ void Iterator::operator++() {
 	link = link -> next;
 }
 
+bool Iterator::operator==(const Iterator & rhs) {
+	return link == rhs.link;
 }
+

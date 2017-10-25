@@ -3,8 +3,8 @@
 class Link {
 private:
 	Link(Link * next, int value) {
-		this -> next = next;
-		this -> value = value;
+		next = next;
+		value = value;
 	}
 
 	Link * next;
